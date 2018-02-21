@@ -54,17 +54,17 @@ nav>h2 {
         url(headshot.jpg) no-repeat;
     background-size:
         auto 110%;
-/*     background-position-x:
+background-position-x:
         -100px
       , 0
-      ; */
+      ;
 
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
-    transform: translateZ(0);
+    /*! transform: translateZ(0); */
     filter: hue-rotate(0);
     will-change: filter, transform;
   }
