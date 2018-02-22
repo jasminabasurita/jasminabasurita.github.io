@@ -44,20 +44,13 @@ nav>h2 {
   margin: -7px 0 0 0;
 }
 
-/* #headshot {
-  background-image: url("./headshot.jpg");
-  width: 500px;
-  height: 500px;
-} */
 #headshot {
     background:
-        url(headshot.jpg) no-repeat;
+        url(headshot.jpg) no-repeat, url(gradient.png) repeat;
     background-size:
-        auto 110%;
-background-position-x:
-        -100px
-      , 0
-      ;
+        auto 110%, auto 110%;
+    background-position-x:
+        -100px, 0;
 
     position: fixed;
     left: 0;
