@@ -45,19 +45,69 @@ nav>h2 {
 }
 
 #headshot {
-    background:
-        url(headshot.jpg) no-repeat, url(gradient.png) repeat;
-    background-size:
-        auto 110%, auto 110%;
-    background-position-x:
-        -100px, 0;
+  background:
+      url(headshot.jpg) no-repeat, url(gradient.png) repeat;
+  background-size:
+      auto 110%, auto 110%;
+  background-position-x:
+      -100px, 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateZ(0);
+  z-index: 1;
+  mix-blend-mode: multiply;
+  will-change: filter, transform;
+}
 
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    /*! transform: translateZ(0); */
-    filter: hue-rotate(0);
-    will-change: filter, transform;
-  }
+#overlay {
+/*   transform: translateZ(0);  
+  z-index: 0; */
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+/*   mix-blend-mode: lighten; */
+  top: 0;
+  left: 0;
+}
+
+/* #overlay::before {
+  background-color: purple;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+/* #overlay::after {
+  background-color: red;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: lighten;
+  top: 0;
+  left: 0;
+} */
+
+#hero {
+  transform: translateZ(0);
+  z-index: 2;
+  margin-top: 100vh;
+  background: white;
+  height: 100vh;
+}
+
+
+
