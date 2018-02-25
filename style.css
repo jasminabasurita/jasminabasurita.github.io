@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  color: #3C301F;
 }
 
 body {
@@ -19,11 +20,9 @@ nav {
   position: fixed;
   top: 0;
   height: 3em;
-  width: calc(100vw - 4em);
-  padding: 10px 10px 10px;
-  margin: 0 2em;
-  border-radius: 0 0 20px 20px;
-  background: rgba(37, 37, 37, 0.8);
+/*   padding: 10px 10px 10px; */
+  width: 100vw;
+  background: rgba(35, 26, 16, 0.8);
   display: flex;
   justify-content: space-between;
   transition: all 1s;
@@ -39,9 +38,46 @@ nav.inactive {
 }
 
 nav>h2 {
+  margin: 3px 0 0 15px;
+}
+
+nav h2, nav h3 {
   font-family: 'Cormorant Garamond', serif;
-  color: white;
-  margin: -7px 0 0 0;
+  color: #DDB160;
+}
+
+nav>div {
+  display: flex;
+/*   justify-content: space-between; */
+/*   width: 20vw; */
+}
+nav button {
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  color: #DDB160;
+  height: 100%;
+  width: 8em;
+  margin: 0 0.5px;
+  box-shadow: -1px 0px 3px rgba(0,0,0, 0.3), 1px 0px 3px rgba(0,0,0, 0.3);
+}
+
+nav button:hover {
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: -1px 0px 1px rgba(0,0,0, 0.2), 1px 0px 1px rgba(0,0,0, 0.2);
+}
+
+nav button:active {
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 0px rgba(0,0,0, 0);
+}
+
+a.current>button, a.current>button:hover, a.current>button:active {
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 0px rgba(0,0,0, 0);
+}
+
+nav div {
+  color: #DDB160;
 }
 
 #headshot {
@@ -62,9 +98,7 @@ nav>h2 {
   will-change: filter, transform;
 }
 
-#overlay {
-/*   transform: translateZ(0);  
-  z-index: 0; */
+#underlay {
   position: fixed;
   left: 0;
   top: 0;
@@ -74,39 +108,18 @@ nav>h2 {
   display: block;
   width: 100%;
   height: 100%;
-/*   mix-blend-mode: lighten; */
   top: 0;
   left: 0;
 }
-
-/* #overlay::before {
-  background-color: purple;
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  mix-blend-mode: multiply;
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
-/* #overlay::after {
-  background-color: red;
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  mix-blend-mode: lighten;
-  top: 0;
-  left: 0;
-} */
 
 #hero {
   transform: translateZ(0);
   z-index: 2;
   margin-top: 100vh;
-  background: white;
+/*   background: rgb(212, 208, 193); */
   height: 100vh;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px -3px 6px, rgba(0, 0, 0, 0.4) 0px -3px 4px;
+  background: rgb(225, 223, 216);
 }
 
 
