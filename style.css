@@ -4,6 +4,7 @@
 }
 
 body {
+  font-size: 16px;
   width: 100%;
   margin: 0;
   padding-top: 3em;
@@ -133,6 +134,7 @@ nav div {
   height: 15em;
   margin: 1em 0;
   transition: all 0.5s;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3), 0px 0px 4px rgba(0, 0, 0, 0.3);
 }
 
 .portfolio-item:hover, .portfolio-item:focus {
@@ -145,7 +147,7 @@ nav div {
   height: 100%;
   transition: all 0.5s ease;
   visibility: hidden;
-  color: white;
+  color: rgba(255, 255, 255, 0);
   padding: 1em 0.5em;
   display: flex;
   flex-direction: column;
@@ -157,7 +159,10 @@ nav div {
 }
 
 .item-overlay>a {
-  color: white;
+  color: rgba(255, 255, 255, 0);
+}
+.item-overlay:hover>a {
+  color: rgba(255, 255, 255, 1);
 }
 .item-overlay>a:hover {
   font-style: italic;
@@ -165,9 +170,10 @@ nav div {
 }
 
 .portfolio-item:hover>.item-overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   background-position-y: 10em;
   visibility: visible;
+  color: rgba(255, 255, 255, 1);
 }
 
 
