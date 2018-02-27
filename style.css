@@ -55,6 +55,7 @@ nav button {
   color: #DDB160;
   height: 100%;
   width: 8em;
+  transition: all 0.3s;
 }
 
 nav button:hover {
