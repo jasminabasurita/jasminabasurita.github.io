@@ -1,0 +1,11 @@
+[
+  {
+    "id": 0,
+    "name": "Integrating Push Notifications in your Node/React Web App",
+    "imageUrl": "/images/PushArticle.png",
+    "description":
+      "A walk through of integrating the Push API through the use of Service Workers into your Node.js back end and your React.js front end",
+    "articleUrl":
+      "https://medium.com/@jasminejacquelin/integrating-push-notifications-in-your-node-react-web-app-4e8d8190a52c"
+  }
+]

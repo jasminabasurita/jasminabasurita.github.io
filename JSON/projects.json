@@ -1,0 +1,29 @@
+[
+  {
+    "id": 2,
+    "name": "Adventure A Day",
+    "imageUrl": "/images/Adventure_A_Day.png",
+    "description":
+      "A social media PWA that enables users to stay in touch with their friends through daily challenges, photo adventures, & chat rooms",
+    "repo": "https://github.com/adventure-a-day/Adventure-A-Day",
+    "deploy": "http://adventure-a-day.tech"
+  },
+  {
+    "id": 1,
+    "name": "Cat Stack Adventures",
+    "imageUrl": "/images/Cat_Stack_Adventures.png",
+    "description":
+      "A unique visualizer for helping aspiring coders learn the often difficult to grasp concept of recursion",
+    "repo": "https://github.com/jasminabasurita/CatStack",
+    "deploy": "https://cat-stack-adventures.herokuapp.com/"
+  },
+  {
+    "id": 0,
+    "name": "Choko",
+    "imageUrl": "/images/Choko.png",
+    "description":
+      "A chocolate e-commerce site that provides users with a full feature rich shopping experience",
+    "repo": "https://github.com/Choko-Hopper/choko-hopper",
+    "deploy": "https://choko-hopper.herokuapp.com/"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Adventure A Day",
+    "imageUrl": "/images/Adventure_A_Day_Present.png",
+    "description":
+      "A social media PWA that enables users to stay in touch with their friends through daily challenges, photo adventures, & chat rooms",
+    "videoUrl": "https://www.youtube.com/watch?v=n1g8hDPAflw"
+  },
+  {
+    "id": 0,
+    "name": "Cat Stack Adventures",
+    "imageUrl": "/images/Cat_Stack_Present.png",
+    "description":
+      "A unique visualizer for helping aspiring coders learn the often difficult to grasp concept of recursion",
+    "videoUrl": "https://www.youtube.com/watch?v=DdlFjoLo7q8"
+  }
+]

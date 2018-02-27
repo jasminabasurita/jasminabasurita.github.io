@@ -1,14 +1,13 @@
 * {
   box-sizing: border-box;
-  color: #3C301F;
+/*   color: rgb(35, 26, 16); */
 }
 
 body {
-  height: 200vh;
   width: 100%;
   margin: 0;
   padding-top: 3em;
-  background: #ad7fa8;
+  background: rgb(130, 58, 111);
   font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -20,7 +19,7 @@ nav {
   position: fixed;
   top: 0;
   height: 3em;
-/*   padding: 10px 10px 10px; */
+  /*   padding: 10px 10px 10px; */
   width: 100vw;
   background: rgba(35, 26, 16, 0.8);
   display: flex;
@@ -29,7 +28,8 @@ nav {
   z-index: 5;
 }
 
-nav.active, nav.inactive:hover {
+nav.active,
+nav.inactive:hover {
   transform: translateY(0);
 }
 
@@ -37,22 +37,23 @@ nav.inactive {
   transform: translateY(-2em);
 }
 
-nav>h2 {
+nav > h2 {
   margin: 3px 0 0 15px;
 }
 
-nav h2, nav h3 {
-  font-family: 'Cormorant Garamond', serif;
-  color: #DDB160;
+nav h2,
+nav h3 {
+  font-family: "Cormorant Garamond", serif;
+  color: #ddb160;
 }
 
-nav>div {
+nav > div {
   display: flex;
 }
 nav button {
   border: none;
   background: rgba(0, 0, 0, 0.3);
-  color: #DDB160;
+  color: #ddb160;
   height: 100%;
   width: 8em;
   transition: all 0.3s;
@@ -60,31 +61,33 @@ nav button {
 
 nav button:hover {
   background: rgba(0, 0, 0, 0.2);
-  box-shadow: -1px 0px 1px rgba(0,0,0, 0.2), 1px 0px 1px rgba(0,0,0, 0.2);
+  box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.2), 1px 0px 1px rgba(0, 0, 0, 0.2);
 }
 
 nav button:active {
   background: rgba(0, 0, 0, 0.5);
-  box-shadow: inset -1px 0px 5px rgba(0,0,0, 0.5),inset 1px 0px 5px rgba(0,0,0, 0.5);
+  box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.5),
+    inset 1px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
-a.current>button, a.current>button:hover, a.current>button:active {
+a.current > button,
+a.current > button:hover,
+a.current > button:active {
   background: rgba(0, 0, 0, 0.4);
-/*   box-shadow: inset 1px 0px 3px rgba(0,0,0, 0); */
-  box-shadow: inset -1px 0px 3px rgba(0,0,0, 0.3),inset 1px 0px 3px rgba(0,0,0, 0.3);
+  /*   box-shadow: inset 1px 0px 3px rgba(0,0,0, 0); */
+  box-shadow: inset -1px 0px 3px rgba(0, 0, 0, 0.3),
+    inset 1px 0px 3px rgba(0, 0, 0, 0.3);
 }
 
 nav div {
-  color: #DDB160;
+  color: #ddb160;
 }
 
 #headshot {
-  background:
-      url(headshot.jpg) no-repeat, url(gradient.png) repeat;
-  background-size:
-      auto 110%, auto 110%;
-  background-position-x:
-      -100px, 0;
+  background: url(images/headshot.jpg) no-repeat,
+    url(images/gradient.png) repeat;
+  background-size: auto 110%, auto 110%;
+  background-position-x: -100px, 0;
   position: absolute;
   left: 0;
   top: 0;
@@ -102,7 +105,7 @@ nav div {
   top: 0;
   bottom: 0;
   right: 0;
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 100%;
@@ -118,6 +121,55 @@ nav div {
   box-shadow: rgba(0, 0, 0, 0.4) 0px -3px 6px, rgba(0, 0, 0, 0.4) 0px -3px 4px;
   background: rgb(225, 223, 216);
 }
+
+#portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.portfolio-item {
+  width: 20em;
+  height: 15em;
+  margin: 1em 0;
+  transition: all 0.5s;
+}
+
+.portfolio-item:hover, .portfolio-item:focus {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4), 0px 0px 8px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+.item-overlay {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  visibility: hidden;
+  color: white;
+  padding: 1em 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-overlay>h2 {
+  margin: 0;
+}
+
+.item-overlay>a {
+  color: white;
+}
+.item-overlay>a:hover {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.portfolio-item:hover>.item-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position-y: 10em;
+  visibility: visible;
+}
+
 
 
 
