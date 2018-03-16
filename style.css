@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding-top: 3em;
   background: rgb(130, 58, 111);
-  font-family: 'Mukta Mahee', Helvetica, Arial, sans-serif;
+  font-family: "Mukta Mahee", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
 }
@@ -29,13 +29,13 @@ nav {
   z-index: 5;
 }
 
+nav.inactive {
+  transform: translateY(-2em);
+}
+
 nav.active,
 nav.inactive:hover {
   transform: translateY(0);
-}
-
-nav.inactive {
-  transform: translateY(-2em);
 }
 
 nav > h2 {
@@ -67,22 +67,21 @@ nav button {
 
 nav button:hover {
   background: rgba(0, 0, 0, 0.2);
-  box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.2), 
-    1px 0px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: -1px 0 1px rgba(0, 0, 0, 0.2), 1px 0 1px rgba(0, 0, 0, 0.2);
 }
 
 nav button:active {
   background: rgba(0, 0, 0, 0.5);
-  box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.5),
-    inset 1px 0px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset -1px 0 5px rgba(0, 0, 0, 0.5),
+    inset 1px 0 5px rgba(0, 0, 0, 0.5);
 }
 
 a.current > button,
 a.current > button:hover,
 a.current > button:active {
   background: rgba(0, 0, 0, 0.4);
-  box-shadow: inset -1px 0px 3px rgba(0, 0, 0, 0.3),
-    inset 1px 0px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset -1px 0 3px rgba(0, 0, 0, 0.3),
+    inset 1px 0 3px rgba(0, 0, 0, 0.3);
 }
 
 nav div {
@@ -115,8 +114,23 @@ nav div {
   display: block;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
+}
+
+#profiles {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 3.5em;
+  right: 0.5em;
+  align-items: center;
+}
+
+#profiles>a {
+  color: rgba(0,0,0,0.8);
+}
+#profiles h1 {
+  margin: 0;
+  padding: 0.5em;
 }
 
 #hero {
@@ -126,12 +140,12 @@ nav div {
   padding: 1em 1em 0.5em 1em;
   color: rgb(35, 26, 16);
   min-height: 55vh;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px -3px 6px, 
-    rgba(0, 0, 0, 0.4) 0px -3px 4px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 -3px 6px, rgba(0, 0, 0, 0.4) 0 -3px 4px;
   background: rgb(225, 223, 216);
   transition: all 0.5s;
 }
-#hero>div {
+
+#hero > div {
   transition: all 0.5s;
 }
 
@@ -150,13 +164,12 @@ nav div {
   height: 15em;
   margin: 1em 0;
   transition: all 0.5s;
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3), 
-    0px 0px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
-.portfolio-item:hover, .portfolio-item:focus {
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4), 
-    0px 0px 8px rgba(0, 0, 0, 0.4);
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4), 0 0 8px rgba(0, 0, 0, 0.4);
   transform: scale(1.01);
 }
 
@@ -172,22 +185,24 @@ nav div {
   justify-content: space-between;
 }
 
-.item-overlay>h2 {
+.item-overlay > h2 {
   margin: 0;
 }
 
-.item-overlay>a {
+.item-overlay > a {
   color: rgba(255, 255, 255, 0);
 }
-.item-overlay:hover>a {
+
+.item-overlay:hover > a {
   color: rgba(255, 255, 255, 1);
 }
-.item-overlay>a:hover {
+
+.item-overlay > a:hover {
   font-style: italic;
   text-decoration: underline;
 }
 
-.portfolio-item:hover>.item-overlay {
+.portfolio-item:hover > .item-overlay {
   background-color: rgba(0, 0, 0, 0.8);
   background-position-y: 10em;
   visibility: visible;
@@ -203,12 +218,13 @@ nav div {
     justify-content: space-around;
     align-items: center;
   }
-  #hero>div {
+
+  #hero > div {
     background: rgb(225, 223, 216);
     width: 850px;
     padding: 0.5em;
-    box-shadow: inset 0 0 4px rgba(0,0,0, 0.7),
-      inset 0 0 8px rgba(0,0,0, 0.7)
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.7),
+      inset 0 0 8px rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -216,38 +232,41 @@ nav div {
   nav {
     padding-right: 1em;
   }
-  nav>div{
+
+  nav > div {
     position: relative;
     display: block;
   }
-  nav>div:hover,
-  nav>div:active,
-  nav>div.clicked,
-  nav>div:focus {
+
+  nav > div:hover,
+  nav > div:active,
+  nav > div.clicked,
+  nav > div:focus {
     background: rgba(0, 0, 0, 0.5);
-    box-shadow: inset -1px 0px 5px rgba(0, 0, 0, 0.5),
-      inset 1px 0px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset -1px 0 5px rgba(0, 0, 0, 0.5),
+      inset 1px 0 5px rgba(0, 0, 0, 0.5);
   }
+
   nav #menu-bars {
     display: block;
     font-size: 1.8em;
     width: 3.71em;
   }
-  nav button.navButton{
+
+  nav button.navButton {
     display: none;
     position: relative;
     background: rgba(0, 0, 0, 0.8);
   }
+
   nav button:hover {
     background: rgba(0, 0, 0, 0.6);
   }
-  nav>div:hover button,
-  nav>div:active button,
-  nav>div.clicked button,
-  nav>div:focus button {
+
+  nav > div:hover button,
+  nav > div:active button,
+  nav > div.clicked button,
+  nav > div:focus button {
     display: block;
   }
 }
-
-
-
