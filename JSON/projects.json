@@ -6,7 +6,7 @@
     "description":
       "A social media PWA that enables users to stay in touch with their friends through daily challenges, photo adventures, & chat rooms",
     "repo": "https://github.com/adventure-a-day/Adventure-A-Day",
-    "deploy": "http://adventure-a-day.tech"
+    "deploy": "https://adventure-a-day.herokuapp.com"
   },
   {
     "id": 1,
