@@ -1,5 +1,22 @@
 [
   {
+    "id": 4,
+    "name": "Collective.Haus",
+    "imageUrl": "/images/Collective_Haus.png",
+    "description":
+      "[IN PROGRESS] A Web App for Managing Collective Living. Think Slack meets Trello meets Mint",
+    "repo": "https://github.com/jasminabasurita/collective.haus"
+  },
+  {
+    "id": 3,
+    "name": "Jazzy Codes",
+    "imageUrl": "/images/Jazzy_Codes.png",
+    "description":
+      "This portfolio you see before your very eyes. Ayy mira, que meta",
+    "repo": "https://github.com/jasminabasurita/jazzy.codes",
+    "deploy": "http://jazzy.codes"
+  },
+  {
     "id": 2,
     "name": "Adventure A Day",
     "imageUrl": "/images/Adventure_A_Day.png",
