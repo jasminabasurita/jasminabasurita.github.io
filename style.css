@@ -126,11 +126,8 @@ nav div {
 }
 
 #profiles>a {
-  color: rgba(0,0,0,0.8);
-}
-#profiles h1 {
-  margin: 0;
-  padding: 0.5em;
+  opacity: 0.8;
+  padding: 16px;
 }
 
 #hero {
